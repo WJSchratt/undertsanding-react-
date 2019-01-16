@@ -13,18 +13,18 @@
 
     <script type="text/babel">
        class Trial extends React.Component {
-         render() {
+         render(props) {
            return (
              <div>
-              <h3>What up world</h3>
-              <p>Does this work?</p>
+              <h3>What up {props.name}</h3>
              </div>
            );
          }
        }
-
+        const greet = <Trial name="John" />;
        ReactDOM.render(
-         <Trial />, document.getElementById('app')
+         greet,
+         document.getElementById('app')
        );
     </script>
   </body>
